@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/find"
+        android:title="Find"/>
+
+    <item
+        android:id="@+id/upload"
+        android:title="Upload"/>
+
+    <item
+        android:id="@+id/bookmarks"
+        android:title="Bookmarks">
+        <menu>
+            <item
+                android:id="@+id/google"
+                android:title="Google"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/facebook"
+                android:title="Facebook"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/instagram"
+                android:title="Instagram"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/Share"
+        android:title="Share">
+        <menu>
+            <item
+                android:id="@+id/toWhatsApp"
+                android:title="To Whatsapp"
+                app:showAsAction="ifRoom"/>
+
+            <item
+                android:id="@+id/toInstagram"
+                android:title="To Instagram"
+                app:showAsAction="ifRoom"/>
+
+            <item
+                android:id="@+id/toFacebook"
+                android:title="To Facebook"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+
+</menu>
