@@ -6,28 +6,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class LaunchBrowsers {
 
-	public static void main(String[] args) {
-		System.out.println("Atman Shastri, 182");
-		String chromeDriverPath = "../../libs_and_drivers/chromedriver.exe";
-		String firefoxDriverPath = "../../libs_and_drivers/geckodriver.exe";
-		String edgeDriverPath = "../../libs_and_drivers/IEDriverServer.exe";
+	LaunchBrowsers(){
 		
-		String url = "https://www.google.com";
-		
-		LaunchBrowsers browser = new LaunchBrowsers();
-		
-		// Run Chrome
-//		WebDriver chrome = browser.initializeChrome(chromeDriverPath);
-//		chrome.get(url);
-		
-		 //Run FireFox
-//		WebDriver firefox = browser.initializeFirefox(firefoxDriverPath);
-//		firefox.get(url);
-		 
-		
-//		 Run Edge
-		WebDriver edge = browser.initializeEdge(edgeDriverPath);
-		edge.get(url);
+
 		
 	}
 
@@ -49,3 +30,4 @@ public class LaunchBrowsers {
 		return edge;
 	}
 }
+
