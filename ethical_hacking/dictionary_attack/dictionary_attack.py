@@ -1,23 +1,22 @@
 import hashlib
 
-found = False
 
-password_hash=input("Enter MD5 hash: ")
-dictionary=input("Enter dictionary filename: ")
+if __name__=="__main__":
+    found = False
 
-try:
-    password_file = open(dictionary,"r")
-except:
-    print("No file found")
-    quit()
+    password_hash=input("Enter MD5 hash: ")
+    dictionary=input("Enter dictionary filename: ")
 
-for word in password_file:
-    enc_word = word.encode('utf-8')
-    digest = hashlib.md5(enc_word.strip()).hexdigest()
-    if(digest==password_hash):
-        print(f"Password is --> {word}\n")
-        found = True
-        break
-
-if not found:
-    print("Password is very strong, couldn't decrypt it\n")
+    try:
+        with open(dictionary,'r') as password_file:
+            for word in password_file:
+                enc_word = word.encode('utf-8')
+                digest = hashlib.md5(enc_word.strip()).hexdigest()
+                if(digest==password_hash):
+                    print(f"Password is --> {word}\n")
+                    found = True
+                    break
+            if not found:
+                print("Password is very strong, couldn't decrypt it\n")
+    except FileNotFoundError:
+        print(f"{dictionary} does not exist, check path or filename")

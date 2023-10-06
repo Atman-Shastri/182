@@ -1,4 +1,4 @@
-package unit2.program2;
+package practicaltwo.calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package unit2.program3;
+package practicaltwo.datetime.socket;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

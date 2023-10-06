@@ -1,4 +1,4 @@
-package unit2.program2;
+package practicaltwo.calculator;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

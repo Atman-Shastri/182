@@ -1,4 +1,4 @@
-package unit2;
+package practicaltwo.communication.oneway;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
