@@ -18,11 +18,19 @@ public class HTMLActions {
 		WebDriver chrome = browser.initializeChrome(chromeDriverPath);
 		chrome.get(url1);
 		chrome.manage().window().maximize();
+		
+		
 		Actions action = new Actions(chrome);
+		WebElement rightClick = chrome.findElement(By.xpath("//*[@id=\"authentication\"]/span"));
+		action.contextClick(rightClick).perform();
+		WebElement quit = chrome.findElement(By.xpath("//*[@id=\"authentication\"]/ul/li[7]"));
+		action.contextClick(quit).perform();
 		
-		WebElement link = chrome.findElement(By.xpath("//*[@id=\"authentication\"]/button"));
-		
-		action.doubleClick(link).perform();
+//		WebElement clickEdit = chrome.findElement(By.xpath("//*[@id=\"authentication\"]/ul/li[1]"));
+//		action.contextClick(clickEdit).perform();
+//		WebElement link = chrome.findElement(By.xpath("//*[@id=\"authentication\"]/button"));
+//		
+//		action.doubleClick(link).perform();
 		
 	}
 
