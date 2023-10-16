@@ -15,7 +15,7 @@
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="461dp"
-        android:onClick="play"/>
+        android:onClick="capture"/>
 
     <Button
         android:id="@+id/button2"
@@ -26,5 +26,5 @@
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="178dp"
         tools:layout_editor_absoluteY="452dp"
-        android:onClick="capture"/>
+        android:onClick="play"/>
 </LinearLayout>
