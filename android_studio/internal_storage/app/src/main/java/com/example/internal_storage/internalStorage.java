@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class internalStorage extends AppCompatActivity {
     private static final String FILE_NAME = "example.txt";
@@ -25,7 +29,7 @@ public class internalStorage extends AppCompatActivity {
 
     public void save(View view) {
         String text = editText.getText().toString();
-        FileOutputStream fileOutputStream;
+        FileOutputStream fileOutputStream = null;
         try {
             fileOutputStream = openFileOutput(FILE_NAME, MODE_PRIVATE);
             fileOutputStream.write(text.getBytes());
@@ -39,14 +43,35 @@ public class internalStorage extends AppCompatActivity {
         } finally {
             if (fileOutputStream != null) {
                 try {
-                    
+                    fileOutputStream.close();
+                } catch (Exception exception) {
+                    exception.printStackTrace();
                 }
             }
         }
     }
 
-    public void load(View view) {
+    public void load(View view) throws IOException {
 
+        FileInputStream fileinputStream = null;
+        try {
+            fileinputStream = openFileInput(FILE_NAME);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileinputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuilder stringBuilder = new StringBuilder();
+            String text;
 
+            while((text = bufferedReader.readLine()) != null){
+                stringBuilder.append(text).append("\n");
+            }
+
+            editText.setText(stringBuilder.toString());
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } finally {
+            if (fileinputStream != null) {
+                fileinputStream.close();
+            }
+        }
     }
 }
