@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 public class internalStorage extends AppCompatActivity {
     private static final String FILE_NAME = "example.txt";
 
-    EditText editText;
+    EditText editText;  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
