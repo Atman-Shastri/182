@@ -19,12 +19,12 @@ public class Alerts {
 		
 		Alert alert = chrome.switchTo().alert();
 		String alertText = alert.getText();
-		System.out.println("Alert is: " + alertText);
-		
-		alert.accept();
-		String newAlertText = alert.getText();
-		System.out.println("New Alert is: " + newAlertText);
-		alert.accept();
+//		System.out.println("Alert is: " + alertText);
+//		
+//		alert.accept();
+//		String newAlertText = alert.getText();
+//		System.out.println("New Alert is: " + newAlertText);
+//		alert.accept();
 	}
 
 }
