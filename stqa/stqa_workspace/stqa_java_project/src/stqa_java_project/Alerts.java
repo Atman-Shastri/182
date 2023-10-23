@@ -25,10 +25,6 @@ public class Alerts {
 		String newAlertText = alert.getText();
 		System.out.println("New Alert is: " + newAlertText);
 		alert.accept();
-		
-	
-		
-
 	}
 
 }

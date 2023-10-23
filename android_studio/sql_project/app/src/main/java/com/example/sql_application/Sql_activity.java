@@ -61,29 +61,28 @@ public class Sql_activity extends AppCompatActivity {
     }
 
     public void updateButtonClicked(View view) {
-        Integer Id = Integer.parseInt(id_field.getText().toString());
-        String name = name_field.getText().toString();
-        Integer salary = Integer.parseInt(salary_field.getText().toString());
+        String Id = id_field.getText().toString();
+        String Name = name_field.getText().toString();
+        String salary = salary_field.getText().toString();
 
-//        boolean isUpdated = ;
-//
-//        if (isUpdated == true) {
-//            Toast.makeText(this, "Updated data successfully!", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(this, "Failed to update data", Toast.LENGTH_SHORT).show();
-//        }
+        boolean isUpdated = databaseHelper.updateData(Id, Name, salary);
 
+        if (isUpdated == true) {
+            Toast.makeText(this, "Updated data successfully!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Failed to update data", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void deleteButtonClicked(View view) {
-        Integer Id = Integer.parseInt(id_field.getText().toString());
+        String Id = id_field.getText().toString();
 
-//        boolean isDeleted = ;
-//
-//        if (isDeleted == true) {
-//            Toast.makeText(this, "Deleted data successfully!", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(this, "Failed to delete data", Toast.LENGTH_SHORT).show();
-//        }
+        Integer isDeleted = databaseHelper.deleteData(Id);
+
+        if (isDeleted == 1) {
+            Toast.makeText(this, "Deleted data successfully!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Failed to delete data", Toast.LENGTH_SHORT).show();
+        }
     }
 }

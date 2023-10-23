@@ -6,12 +6,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class LaunchBrowsers {
 
-	LaunchBrowsers(){
-		
-
-		
-	}
-
 	public WebDriver initializeChrome(String chromeDriverPath) {
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 		WebDriver chrome = new ChromeDriver();
