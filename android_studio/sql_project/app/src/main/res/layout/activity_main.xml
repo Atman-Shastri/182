@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sql_activity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQlite DB Application"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/id_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID field"/>
+
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name Field"/>
+
+    <EditText
+        android:id="@+id/salary_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary Field"/>
+
+    <Button
+        android:id="@+id/view_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="viewButtonClicked"
+        android:text="View" />
+
+    <Button
+        android:id="@+id/insert_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="insertButtonClicked"
+        android:text="Insert" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="updateButtonClicked"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="deleteButtonClicked"
+        android:text="Delete" />
+
+    
+
+
+
+</LinearLayout>
