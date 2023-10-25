@@ -1,0 +1,10 @@
+#Tue Oct 17 14:33:27 IST 2023
+base.0=D\:\\182\\android_studio\\wifi_service\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=D\:\\182\\android_studio\\wifi_service\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=D\:\\182\\android_studio\\wifi_service\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\7\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=7/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

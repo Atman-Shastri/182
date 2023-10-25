@@ -12,13 +12,13 @@ public class MyServer extends UnicastRemoteObject implements MyInterface{
 		super();
 	}
 	
-//	public String getDate() throws RemoteException{
-//		return new SimpleDateFormat("dd/MM/yyyy").format(new Date()).toString();
-//	}
-//	
-//	public String getTime() throws RemoteException{
-//		return new SimpleDateFormat("hh:mm:ss").format(new Date()).toString();
-//	}
+	public String getDate() throws RemoteException{
+		return new SimpleDateFormat("dd/MM/yyyy").format(new Date()).toString();
+	}
+	
+	public String getTime() throws RemoteException{
+		return new SimpleDateFormat("hh:mm:ss").format(new Date()).toString();
+	}
 	
 	public int find(int a, int b) {
 		if(a>b) {
