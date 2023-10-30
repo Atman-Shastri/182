@@ -6,4 +6,8 @@ public String getDate() throws RemoteException;
 public String getTime() throws RemoteException;
 
 public int find(int a, int b) throws RemoteException;
+
+double calculateSquare(double a, double b) throws RemoteException;
+
+double calculateCube(double a, double b) throws RemoteException;
 }

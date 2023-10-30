@@ -10,6 +10,7 @@ public class MyServer1 {
 			Registry reg = LocateRegistry.createRegistry(2099);
 			MyServer obj = new MyServer();
 			Naming.rebind("rmi://localhost:2099/g",obj);
+			Naming.rebind("rmi://localhost:2099/equations",obj);
 		}catch(Exception exception) {
 			System.out.println(exception);
 		}

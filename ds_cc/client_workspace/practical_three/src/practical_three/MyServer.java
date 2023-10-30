@@ -27,4 +27,14 @@ public class MyServer extends UnicastRemoteObject implements MyInterface{
 			return b;
 		}
 	}
+	
+	@Override
+	public double calculateSquare(double a, double b) throws RemoteException {
+		return Math.pow(a + b, 2);
+	}
+
+	@Override
+	public double calculateCube(double a, double b) throws RemoteException {
+		return Math.pow(a + b, 3);
+	}
 }
