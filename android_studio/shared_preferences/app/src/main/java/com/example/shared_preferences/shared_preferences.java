@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class shared_preferences extends AppCompatActivity {
 
@@ -27,6 +28,7 @@ public class shared_preferences extends AppCompatActivity {
 
      editText.setText("");
 
+        Toast.makeText(this, "Saved data to shared preferences", Toast.LENGTH_LONG).show();
 
     }
 
@@ -36,5 +38,7 @@ public class shared_preferences extends AppCompatActivity {
         String message = preference.getString("key1","Key does not match");
 
         editText.setText(message);
+
+        Toast.makeText(this, "Loaded data from Shared Preferences", Toast.LENGTH_LONG).show();
     }
 }
