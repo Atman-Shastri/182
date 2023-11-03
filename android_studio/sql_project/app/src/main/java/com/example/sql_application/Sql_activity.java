@@ -42,7 +42,9 @@ public class Sql_activity extends AppCompatActivity {
             while (result.moveToNext()) {
                 buffer.append("Id: " + result.getString(0) + "\n");
                 buffer.append("Name: " + result.getString(1) + "\n");
+                name_field.setText(result.getString(1));
                 buffer.append("Salary: " + result.getString(2) + "\n");
+                salary_field.setText(result.getString(2));
             }
             Toast.makeText(this, buffer.toString(), Toast.LENGTH_SHORT).show();
         }
