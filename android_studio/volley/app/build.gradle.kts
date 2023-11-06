@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.okhttpproject"
+    namespace = "com.example.myapplication"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.okhttpproject"
+        applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -32,7 +32,6 @@ android {
 }
 
 dependencies {
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation("androidx.appcompat:appcompat:1.6.1")
