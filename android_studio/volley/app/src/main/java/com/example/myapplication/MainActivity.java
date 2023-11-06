@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button getData;
 
-    RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
+    RequestQueue mQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_field);
         imageView = findViewById(R.id.image_field);
-
+        mQueue = Volley.newRequestQueue(this);
         getData = findViewById(R.id.ui_button);
     }
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     String login = response.getString("login");
                     String id = response.getString("id");
                     String node_id = response.getString("node_id");
-                    String img_url = response.getString("img_url");
+                    String img_url = response.getString("avatar_url");
                     textView.setText("Login: " + login + "ID: " + id + "Node ID: " + node_id);
                     Picasso.get().load(img_url).into(imageView);
                 } catch (JSONException jsonException) {
