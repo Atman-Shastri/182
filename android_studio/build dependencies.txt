@@ -1,0 +1,72 @@
+implementation("com.squareup.retrofit2:retrofit:2.7.2")
+implementation("com.squareup.retrofit2:converter gson:2.7.2")
+
+
+
+
+
+
+API.java
+
+String BASE_URL = "https://api.github.com/";
+@GET("users")
+Call<List<MyClass>> getRecords();
+
+
+
+MyClass.java
+
+
+String login;
+String node_id;
+
+public MyClass(String login, String node_id){
+this.login = login;
+this.node_id = node_id
+}
+
+public String getLogin(){
+return login;
+}
+
+public void setLogin(String login){
+this.login = login;
+}
+
+public String getNodeId(){
+return node_id;
+}
+
+public void setNodeId(String node_id){
+this.node_id = node_id;
+}
+
+
+
+MainActivity.java
+
+oncreate --> getRecords();
+
+private void getRecords(){
+	Retrofit retrofit = new Retrofit.Builder().baseUrl(API.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+
+API api = retrofit.create(API.class);
+
+Call<List<MyClass>> cakk = api.getRecords();
+call.enqueue(new Callbakc<List<MyClass>>(){}
+
+@Override
+public void onResponse(Call<List<MyClass>> call, Response<List<MyClass>> response){
+
+List<MyClass> list = response.body();
+for(int i= 0; i < list.size();i++){
+txtView.append(list.get(i).getLogin() + ", " + list.get(i).getNodeId());
+}
+
+}
+
+@Override
+public void onFailure(Call<List<MyClass>> call, Throwable t){
+Toast.makeText(MainActivity.this,"ERROR!!! TRY AGAIN LATER", Toast.LENGTH_LONG).show();
+}
+}
