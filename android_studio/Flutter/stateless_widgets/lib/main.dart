@@ -4,28 +4,23 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return const MaterialApp(
-     home: HomePage(),
-   );
-    throw UnimplementedError();
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        title: const Text("Welcome to Flutter"),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(20),
+        child: const Text(
+          "Welcome to Flutter",
+          style: TextStyle(fontSize: 20.0),
+        ),
+      ),
+    ));
   }
-
 }
-
-class HomePage extends StatelessWidget{
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-  
-}
-
-

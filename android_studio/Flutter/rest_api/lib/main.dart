@@ -1,7 +1,6 @@
-import 'dart:async/';
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 void main() {
@@ -37,7 +36,19 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
+    return Scaffold(
+      appBar: AppBar(
+          title: const Text("REST API using ListView"),
+          backgroundColor: Colors.blue),
+      body: ListView.builder(
+        itemCount: data.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            child: Text(data[index]["body"]),
+          );
+        },
+      ),
+    );
     throw UnimplementedError();
   }
 }
