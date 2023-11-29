@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("ListView Example"),
+          backgroundColor: Colors.blue,
+          titleTextStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+          elevation: 20,
         ),
         body: const ListData(),
       ),

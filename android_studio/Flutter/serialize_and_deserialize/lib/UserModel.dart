@@ -1,7 +1,11 @@
 class UserModel {
   late String id, fullname, email, percentage;
 
-  UserModel({required this.id, required this.fullname, required this.email, required this.percentage});
+  UserModel(
+      {required this.id,
+      required this.fullname,
+      required this.email,
+      required this.percentage});
 
   UserModel.fromMap(Map<String, dynamic> map) {
     this.id = map["id"];

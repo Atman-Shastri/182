@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+const TextStyle textStyle =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 40);
+
 class ProductBox extends StatelessWidget {
   const ProductBox({super.key});
 
@@ -25,29 +28,27 @@ class ProductBox extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(2),
         height: 120,
-        child: Card(
+        child: const Card(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              const Image(
+              Image(
                   image: AssetImage(
                     'images/space.jpg',
                   ),
                   height: 1200,
                   width: 1200),
               Expanded(
-                  child: Container(
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Text(
-                      "Product",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text("Description"),
-                    Text("Price: 50")
-                  ],
-                ),
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text(
+                    "Product",
+                    style: textStyle,
+                  ),
+                  Text("Description", style: textStyle),
+                  Text("Price: 29,999", style: textStyle)
+                ],
               ))
             ],
           ),

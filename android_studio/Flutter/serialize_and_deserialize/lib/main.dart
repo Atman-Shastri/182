@@ -29,14 +29,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  UserModel userObject = new UserModel(
-      id: "182", fullname: "Atman Shastri", email: "atmanshastri@gmail.com", percentage:"51 %");
+  UserModel userObject = UserModel(
+      id: "182",
+      fullname: "Atman Shastri",
+      email: "atmanshastri@gmail.com",
+      percentage: "51 %");
   String userJSON =
       '{"id": "182", "fullname": "Atman Shastri", "email":"atmanshastri@gmail.com", "percentage":"51 %"}';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("JSON Operations"),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
+        elevation: 20,
+      ),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,9 +62,12 @@ class _HomePageState extends State<HomePage> {
                 var json = jsonEncode(userMap);
                 print(json.toString());
               },
-              child: Text("Serialize"),
+              child: const Text(
+                "Serialize",
+                style: TextStyle(fontSize: 30),
+              ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             ElevatedButton(
@@ -60,10 +76,14 @@ class _HomePageState extends State<HomePage> {
                   //1. Convert Map to JSON -> 2. Object to Map
                   var decode = jsonDecode(userJSON);
                   Map<String, dynamic> userMap = decode;
-                  UserModel newuser = new UserModel.fromMap(userMap);
-                  print("Name: ${newuser.fullname}, Percentage: ${newuser.percentage}");
+                  UserModel newuser = UserModel.fromMap(userMap);
+                  print(
+                      "Name: ${newuser.fullname}, Percentage: ${newuser.percentage}");
                 },
-                child: Text("Deserialize")),
+                child: const Text(
+                  "Deserialize",
+                  style: TextStyle(fontSize: 30),
+                )),
           ],
         ),
       ),

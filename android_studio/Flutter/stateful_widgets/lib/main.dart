@@ -25,6 +25,12 @@ class _FavoriteCityState extends State<FavoriteCity> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Stateful App Example"),
+        backgroundColor: Colors.blue,
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
+        elevation: 20,
       ),
       body: Container(
         margin: const EdgeInsets.all(20.0),

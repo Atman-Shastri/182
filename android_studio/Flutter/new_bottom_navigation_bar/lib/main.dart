@@ -37,17 +37,21 @@ class _BottomNavigationBarExampleState
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: Status',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Communities',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'Index 3: Calls',
       style: optionStyle,
     ),
+    Text(
+      'Index 4: Settings',
+      style: optionStyle,
+    )
   ];
 
 
@@ -63,6 +67,12 @@ class _BottomNavigationBarExampleState
     return Scaffold(
       appBar: AppBar(
         title: const Text('BottomNavigationBar Sample'),
+        backgroundColor: Colors.blue,
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
+        elevation: 20,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
