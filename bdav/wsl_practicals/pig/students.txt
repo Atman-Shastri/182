@@ -1,0 +1,14 @@
+57,Kalambi Dhanashree Gajanan,MCA
+58,Kamble Rutuja Rajendra,MCA
+59,Kanvinde Nandan Keshav,MCA
+60,Karande Yogesh Prakash,MCA
+61,Kennedy Robert Antony,MCA
+62,Kesarwani Shivam Premchand,MCA
+63,Kewat Poojadevi Bhagirathi,MCA
+64,Khan Amir Lukman,MCA
+65,Khan Asif Ayyub,MCA
+66,Khan Roman Iqbal,MCA
+67,Khan Saifullah Yahiya,MCA
+68,Khan Sameer Lukman,MCA
+69,Khan Tausif Raees,MCA
+70,Khan Tousifraza Ateekahmed,MCA
