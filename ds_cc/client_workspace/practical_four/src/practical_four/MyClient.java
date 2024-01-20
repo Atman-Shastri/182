@@ -12,9 +12,9 @@ public class MyClient {
 		MyInterface obj = (MyInterface)Naming.lookup("rmi://localhost:2099/db");
 	
 //		obj.insertData();
-		boolean acknowledgment= obj.updateData();
-//		String data = obj.getData();
-		System.out.println(acknowledgment);
+//		boolean acknowledgment= obj.updateData();
+		String data = obj.getData();
+		System.out.println(data);
 	}
 
 }

@@ -16,7 +16,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 	public String getData() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/library", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "root");
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select * from book");
 			while (rs.next()) {
@@ -33,7 +33,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 		boolean acknowledgement = false;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/library", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "root");
 			Statement st = con.createStatement();
 			int result = st.executeUpdate("insert into book values(1,'Harry Potter', 'J.K Rowling')");
 			System.out.println(result + " rows affected");

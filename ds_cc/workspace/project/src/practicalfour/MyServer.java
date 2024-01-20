@@ -19,7 +19,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 		String str = "";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/Electric_Bill", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/Electric_Bill", "root", "root");
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select * from bill");
 			while (rs.next()) {
@@ -35,7 +35,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 	public int insertData() throws RemoteException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/Electric_Bill", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/Electric_Bill", "root", "root");
 			Statement st = con.createStatement();
 			int result = st.executeUpdate("insert into bill values('Atman','26/10/2023',2000.45)");
 			System.out.println(result + " rows affected");
@@ -50,7 +50,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 	public int updateData() throws RemoteException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/Electric_Bill", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/Electric_Bill", "root", "root");
 			Statement st = con.createStatement();
 			int result = st.executeUpdate("update bill set bill_amount=2200.45 where consumer_name='Atman';");
 			System.out.println(result + " rows affected");
@@ -65,7 +65,7 @@ public class MyServer extends UnicastRemoteObject implements MyInterface {
 	public int deleteData() throws RemoteException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/Electric_Bill", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/Electric_Bill", "root", "root");
 			Statement st = con.createStatement();
 			int result = st.executeUpdate("delete from bill where consumer_name='Atman'");
 			System.out.println(result + " rows affected");

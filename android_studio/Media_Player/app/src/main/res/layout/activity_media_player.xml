@@ -12,32 +12,39 @@
         android:layout_width="390dp"
         android:layout_height="100dp"
         />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
 
     <Button
+        style="@style/ButtonPadding"
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#2EC322"
+        android:background="@drawable/rounded_button"
         android:gravity="center"
-        android:text="Play" />
+        android:text="Play"/>
 
     <Button
+        style="@style/ButtonPadding"
+        android:background="@drawable/rounded_button"
         android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#D6C20E"
         android:text="Pause"
         android:gravity="center"
         android:layout_gravity="center"/>
 
     <Button
+        style="@style/ButtonPadding"
+        android:background="@drawable/rounded_button"
         android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#D60E25"
         android:text="Stop"
         android:gravity="center"
         android:layout_gravity="center"/>
-
+</LinearLayout>
 </LinearLayout>
